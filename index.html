@@ -4,7 +4,7 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>PreuSync™ — La Plataforma Educativa para Preuniversitarios en Cuba</title>
-     <meta name="description" content="PreuSync™ es la aplicación que organiza la vida escolar preuniversitaria en Cuba: horario en tiempo real, comunidad de estudio con fórmulas matemáticas, noticias, eventos y efemérides. Proyecto de BinaryQva™ desarrollado por JiroxDEV.">
+     <meta name="description" content="PreuSync™ es la plataforma integral para preuniversitarios en Cuba: horario escolar dinámico, noticias, eventos, efemérides y comunidad estudiantil. Proyecto de BinaryQva™ desarrollado por JiroxDEV.">
      <script>
           (function () {
                const savedTheme = localStorage.getItem('theme');
@@ -15,6 +15,12 @@
                     document.documentElement.setAttribute('data-theme', 'dark');
                }
           })();
+
+          function copyText(text) {
+               navigator.clipboard.writeText(text).then(() => {
+                    alert('¡Copiado al portapapeles!: ' + text);
+               });
+          }
      </script>
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,15 +51,14 @@
                <ul class="nav-links" id="nav-links">
                     <li><a href="#home">Inicio</a></li>
                     <li><a href="#objectives">Objetivos</a></li>
-                    <li><a href="#features">Funciones</a></li>
-                    <li><a href="#customization">Personalización</a></li>
-                    <li><a href="#download">Descargar</a></li>
-                    <li><a href="#about">Sobre nosotros</a></li>
+                    <li><a href="#features">Módulos</a></li>
+                    <li><a href="#donations">Donaciones</a></li>
+                    <li><a href="#download">Descargar APK</a></li>
+                    <li><a href="#about">Acerca de</a></li>
                </ul>
           </div>
      </header>
 
-     <!-- HERO SECTION -->
      <section class="home" id="home">
           <h1 class="fade-in">Sincroniza tu vida escolar con <br><span class="gradient-text">PreuSync™</span></h1>
           <div class="home-typing fade-in">
@@ -61,10 +66,10 @@
           </div>
           <div class="btn-group fade-in">
                <a href="#download" class="btn btn-primary">
-                    <svg class="icon"><use href="img/icons.svg#icon-download"></use></svg> Descargar
+                    <svg class="icon"><use href="img/icons.svg#icon-download"></use></svg> Descargar APK Android
                </a>
-               <a href="#objectives" class="btn btn-secondary">
-                    <svg class="icon"><use href="img/icons.svg#icon-bulb"></use></svg> Leer más
+               <a href="https://preusync-admin.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    <svg class="icon"><use href="img/icons.svg#icon-shield"></use></svg> Acceso Panel Admin
                </a>
           </div>
      </section>
@@ -82,13 +87,13 @@
           </div>
      </section>
 
-     <!-- SECCIÓN MÓDULOS Y FUNCIONALIDADES BASADAS EN CÓDIGO REAL -->
+     <!-- SECCIÓN BENEFICIOS Y MÓDULOS -->
      <section class="section-container" id="features">
           <h2 class="section-title fade-in">Cómo te ayuda cada día</h2>
           <div class="grid">
                <div class="card fade-in">
                     <h3>Sabe qué clase te toca al instante</h3>
-                    <p>Olvídate de preguntar "¿qué turno nos toca ahora?". La aplicación resalta en pantalla la asignatura que estás recibiendo en el minuto exacto según el reloj de tu teléfono. Además, incluye la pestaña de Leyenda Oficial con la lista de asignaturas (M, LL, HC, H, B, CP, DC, IF, I, Q, EF, F, G, DR) para que no tengas dudas.</p>
+                    <p>Olvídate de preguntar "¿qué turno nos toca ahora?". La aplicación resalta en pantalla la asignatura que estás recibiendo en el minuto exacto según el reloj de tu teléfono. Además, incluye la guía oficial de asignaturas para que no tengas dudas.</p>
                </div>
 
                <div class="card fade-in">
@@ -97,34 +102,87 @@
                </div>
 
                <div class="card fade-in">
-                    <h3>Avisos y boletines oficiales de tu escuela</h3>
+                    <h3>Avisos oficiales de tu escuela</h3>
                     <p>Recibe los comunicados importantes directamente de la dirección de tu preuniversitario: avisos de profesores, cambios de aula, notas para los padres y recordatorios escolares sin depender de cadenas de mensajes.</p>
                </div>
 
                <div class="card fade-in">
-                    <h3>Agenda de exámenes y convocatorias</h3>
+                    <h3>Organiza tus exámenes y actividades</h3>
                     <p>Planifica tus semanas de estudio con antelación. Organizado en dos pestañas claras para consultar tanto las actividades de tu escuela como las convocatorias nacionales y pruebas de ingreso.</p>
                </div>
 
                <div class="card fade-in">
                     <h3>Aprende algo nuevo cada mañana</h3>
-                    <p>Un catálogo de efemérides con buscador por fecha que te muestra los hechos históricos más destacados de Cuba y del mundo que ocurrieron cada día, ideal para prepararte antes de la matutina escolar.</p>
+                    <p>Un catálogo de efemérides con buscador por fecha que te muestra los hechos históricos más destacados de Cuba y del mundo que ocurrieron cada día, ideal para prepararte para el matutino escolar.</p>
                </div>
 
                <div class="card fade-in">
-                    <h3>Funciona sin internet y cuida tus datos</h3>
-                    <p>Diseñada especialmente para gastar lo mínimo de tus datos móviles con un modo de ahorro. Si te quedas sin conexión o hay poca cobertura dentro del aula, la aplicación guarda una copia segura en tu teléfono para que sigas consultando tu horario y tus notas.</p>
+                    <h3>Funciona sin internet y ahorra tus datos</h3>
+                    <p>Diseñada especialmente para gastar lo mínimo de tus datos móviles. Si te quedas sin conexión o hay poca cobertura dentro del aula, la aplicación sigue mostrándote tu horario y tus notas guardadas.</p>
                </div>
           </div>
      </section>
 
-     <!-- SECCIÓN PERSONALIZACIÓN Y AJUSTES -->
-     <section class="section-container" id="customization">
-          <h2 class="section-title fade-in">Diseñada a tu Gusto</h2>
-          <div class="text-container fade-in">
-               <p class="about-text">
-                    PreuSync™ se adapta a la forma en que prefieres estudiar. Desde el menú de ajustes puedes elegir el **Modo Claro, Modo Oscuro o Automático**, cambiar el tamaño de letra, seleccionar tu idioma preferido (Español o Inglés) y decidir qué secciones deseas ver en la pantalla de inicio.
-               </p>
+     <!-- SECCIÓN MÉTODOS DE DONACIÓN Y APOYO FINANCIERO -->
+     <section class="section-container" id="donations">
+          <h2 class="section-title fade-in">Apoyo Financiero y Donaciones</h2>
+          <p class="mision-text fade-in" style="margin-bottom: 24px;">
+               PreuSync™ es un proyecto 100% gratuito y sin anuncios. Tus contribuciones nos ayudan a mantener los servidores activos y seguir mejorando la plataforma.
+          </p>
+          <div class="grid">
+               <!-- Zaps Bio -->
+               <div class="card fade-in">
+                    <h3>
+                         <span style="display: inline-flex; align-items: center; gap: 8px;">
+                              <svg class="icon" style="color: #66D3FF;"><use href="img/icons.svg#icon-zap"></use></svg> Zaps Bio (Lightning / Nostr)
+                         </span>
+                    </h3>
+                    <p>Donaciones mediante Bitcoin Lightning Network y Nostr Zaps.</p>
+                    <a href="https://zaps.bio/binaryqva" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 0.85rem; padding: 10px 16px;">
+                         <svg class="icon"><use href="img/icons.svg#icon-zap"></use></svg> Zaps Bio
+                    </a>
+               </div>
+
+               <!-- Transfermóvil BPA -->
+               <div class="card fade-in">
+                    <h3>
+                         <span style="display: inline-flex; align-items: center; gap: 8px;">
+                              <svg class="icon" style="color: #66D3FF;"><use href="img/icons.svg#icon-card"></use></svg> Transfermóvil (CUP - BPA)
+                         </span>
+                    </h3>
+                    <p>Tarjeta BPA: <strong style="color: var(--text-main);">9205129976701558</strong></p>
+                    <button onclick="copyText('9205129976701558')" class="btn btn-secondary" style="font-size: 0.85rem; padding: 10px 16px;">
+                         <svg class="icon"><use href="img/icons.svg#icon-copy"></use></svg> Copiar Tarjeta BPA
+                    </button>
+               </div>
+
+               <!-- USDT & Crypto -->
+               <div class="card fade-in" style="grid-column: span 1 / -1;">
+                    <h3>
+                         <span style="display: inline-flex; align-items: center; gap: 8px;">
+                              <svg class="icon" style="color: #66D3FF;"><use href="img/icons.svg#icon-crypto"></use></svg> Criptomonedas (USDT, SOL, TON)
+                         </span>
+                    </h3>
+                    <p>Redes soportadas para donaciones cripto en USDT, Solana y Toncoin:</p>
+                    <div style="display: flex; flex-direction: column; gap: 10px; font-family: var(--font-heading); font-size: 0.85rem;">
+                         <div style="display: flex; justify-content: space-between; align-items: center; background: var(--bg-main); padding: 10px; border-radius: 8px; border: 1px solid var(--border-color);">
+                              <span><strong>BEP20 / ERC20:</strong> <span style="color: var(--text-muted); font-size: 0.75rem;">0x042bF7f30aF43b7A69f18F5Fd28e29179CbA8446</span></span>
+                              <button onclick="copyText('0x042bF7f30aF43b7A69f18F5Fd28e29179CbA8446')" class="btn btn-secondary" style="padding: 4px 10px; font-size: 0.75rem;">Copiar</button>
+                         </div>
+                         <div style="display: flex; justify-content: space-between; align-items: center; background: var(--bg-main); padding: 10px; border-radius: 8px; border: 1px solid var(--border-color);">
+                              <span><strong>TRC20 (TRON):</strong> <span style="color: var(--text-muted); font-size: 0.75rem;">TEphHAaFE3ogamr4pTZUSSzXXHR8heFHzf</span></span>
+                              <button onclick="copyText('TEphHAaFE3ogamr4pTZUSSzXXHR8heFHzf')" class="btn btn-secondary" style="padding: 4px 10px; font-size: 0.75rem;">Copiar</button>
+                         </div>
+                         <div style="display: flex; justify-content: space-between; align-items: center; background: var(--bg-main); padding: 10px; border-radius: 8px; border: 1px solid var(--border-color);">
+                              <span><strong>Solana (SOL):</strong> <span style="color: var(--text-muted); font-size: 0.75rem;">H8J5tCkC38hXQoNC6K6Yv8P8k5irGFA5XQiGVxyw25iR</span></span>
+                              <button onclick="copyText('H8J5tCkC38hXQoNC6K6Yv8P8k5irGFA5XQiGVxyw25iR')" class="btn btn-secondary" style="padding: 4px 10px; font-size: 0.75rem;">Copiar</button>
+                         </div>
+                         <div style="display: flex; justify-content: space-between; align-items: center; background: var(--bg-main); padding: 10px; border-radius: 8px; border: 1px solid var(--border-color);">
+                              <span><strong>Toncoin (TON):</strong> <span style="color: var(--text-muted); font-size: 0.75rem;">UQD31gwYfU9T8sSQ_V76htxPRm2RUVNWzb4QwEnmYmHDUSsk</span></span>
+                              <button onclick="copyText('UQD31gwYfU9T8sSQ_V76htxPRm2RUVNWzb4QwEnmYmHDUSsk')" class="btn btn-secondary" style="padding: 4px 10px; font-size: 0.75rem;">Copiar</button>
+                         </div>
+                    </div>
+               </div>
           </div>
      </section>
 
@@ -166,11 +224,11 @@
                     <span><svg class="icon"><use href="img/icons.svg#icon-globe"></use></svg> Descarga Liviana (~18.5 MB)</span>
                     <span><svg class="icon"><use href="img/icons.svg#icon-code"></use></svg> 100% Gratuita y Libre</span>
                </div>
-               <div style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
-                    <a href="https://github.com/JiroxDEV/preusync-android/releases/latest" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                         <svg class="icon"><use href="img/icons.svg#icon-download"></use></svg> Descargar
+               <div style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
+                    <a href="https://github.com/BinaryQva-Oficial/preusync-android/releases/latest" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                         <svg class="icon"><use href="img/icons.svg#icon-download"></use></svg> Descargar APK Oficial
                     </a>
-                    <a href="https://github.com/JiroxDEV/preusync-android" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                    <a href="https://github.com/BinaryQva-Oficial/preusync-android" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                          <svg class="icon"><use href="img/icons.svg#icon-code"></use></svg> Ver Código en GitHub
                     </a>
                </div>
@@ -198,7 +256,7 @@
                <div class="footer-links">
                     <a href="https://preusync-admin.onrender.com" target="_blank" rel="noopener noreferrer">Panel Admin</a>
                     <a href="mailto:jiroxdev@preusync.com">Contacto</a>
-                    <a href="https://github.com/JiroxDEV" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://github.com/BinaryQva-Oficial" target="_blank" rel="noopener noreferrer">GitHub</a>
                </div>
           </div>
      </footer>
